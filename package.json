@@ -1,5 +1,5 @@
 {
-  "name": "npm-boilerplate",
+  "name": "semantic-release-telegram",
   "version": "0.0.1",
   "description": "boilerplate for creating npm packages",
   "main": "./lib",
@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pustovitDmytro/npm-boilerplate.git"
+    "url": "https://github.com/pustovitDmytro/semantic-release-telegram.git"
   },
   "author": "Dmytro Pustovit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pustovitDmytro/npm-boilerplate/issues"
+    "url": "https://github.com/pustovitDmytro/semantic-release-telegram/issues"
   },
-  "homepage": "https://github.com/pustovitDmytro/npm-boilerplate#readme",
+  "homepage": "https://github.com/pustovitDmytro/semantic-release-telegram#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
@@ -55,9 +55,11 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "chai": "^4.2.0",
     "chance": "^1.0.18",
+    "cls-hooked": "^4.2.2",
     "conventional-changelog-eslint": "^3.0.1",
     "coveralls": "^3.0.3",
     "danger": "^10.6.4",
+    "docopt": "^0.6.2",
     "eslint": "^7.0.0",
     "eslint-config-webbylab": "^4.0.0",
     "eslint-plugin-fetch": "0.0.1",
@@ -76,5 +78,11 @@
     "rollup": "^2.45.2",
     "semantic-release": "^17.4.2",
     "uuid": "^8.0.0"
+  },
+  "dependencies": {
+    "base-api-client": "^1.2.0",
+    "livr": "^2.3.3",
+    "livr-extra-rules": "^1.2.1",
+    "myrmidon": "^1.4.5"
   }
 }

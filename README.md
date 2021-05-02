@@ -1,5 +1,5 @@
-# npm-boilerplate
-**npm-boilerplate** boilerplate for creating npm packages.
+# semantic-release-telegram
+**semantic-release-telegram** boilerplate for creating npm packages.
 
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
@@ -38,7 +38,7 @@ To use library you need to have [node](https://nodejs.org) and [npm](https://www
 To install the library run following command
 
 ```bash
-  npm i --save npm-boilerplate
+  npm i --save semantic-release-telegram
 ```
 
 ## Usage
@@ -69,41 +69,41 @@ The Tag is one of the following:
 The message summary should be a one-sentence description of the change. The issue number should be mentioned at the end.
 
 
-[npm]: https://www.npmjs.com/package/npm-boilerplate
-[github]: https://github.com/pustovitDmytro/npm-boilerplate
-[travis]: https://travis-ci.org/pustovitDmytro/npm-boilerplate
-[coveralls]: https://coveralls.io/github/pustovitDmytro/npm-boilerplate?branch=master
-[badge-deps]: https://img.shields.io/david/pustovitDmytro/npm-boilerplate.svg
-[badge-tests]: https://travis-ci.com/pustovitDmytro/npm-boilerplate.svg?branch=master
-[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/npm-boilerplate.svg?style=popout
-[badge-vers]: https://img.shields.io/npm/v/npm-boilerplate.svg
-[badge-lic]: https://img.shields.io/github/license/pustovitDmytro/npm-boilerplate.svg
-[badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/npm-boilerplate/badge.svg?branch=master
-[url-coverage]: https://coveralls.io/github/pustovitDmytro/npm-boilerplate?branch=master
+[npm]: https://www.npmjs.com/package/semantic-release-telegram
+[github]: https://github.com/pustovitDmytro/semantic-release-telegram
+[travis]: https://travis-ci.org/pustovitDmytro/semantic-release-telegram
+[coveralls]: https://coveralls.io/github/pustovitDmytro/semantic-release-telegram?branch=master
+[badge-deps]: https://img.shields.io/david/pustovitDmytro/semantic-release-telegram.svg
+[badge-tests]: https://travis-ci.com/pustovitDmytro/semantic-release-telegram.svg?branch=master
+[badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/semantic-release-telegram.svg?style=popout
+[badge-vers]: https://img.shields.io/npm/v/semantic-release-telegram.svg
+[badge-lic]: https://img.shields.io/github/license/pustovitDmytro/semantic-release-telegram.svg
+[badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/semantic-release-telegram/badge.svg?branch=master
+[url-coverage]: https://coveralls.io/github/pustovitDmytro/semantic-release-telegram?branch=master
 
-[codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/npm-boilerplate/badge
-[codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/npm-boilerplate
+[codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-telegram/badge
+[codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-telegram
 
-[fossa-badge]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FpustovitDmytro%2Fnpm-boilerplate.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/git%2Bgithub.com%2FpustovitDmytro%2Fnpm-boilerplate?ref=badge_shield
+[fossa-badge]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FpustovitDmytro%2Fsemantic-release-telegram.svg?type=shield
+[fossa-url]: https://app.fossa.com/projects/git%2Bgithub.com%2FpustovitDmytro%2Fsemantic-release-telegram?ref=badge_shield
 
-[commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/npm-boilerplate
+[commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/semantic-release-telegram
 
-[scrutinizer-badge]: https://scrutinizer-ci.com/g/pustovitDmytro/npm-boilerplate/badges/quality-score.png?b=master
-[scrutinizer-url]: https://scrutinizer-ci.com/g/pustovitDmytro/npm-boilerplate/?branch=master
+[scrutinizer-badge]: https://scrutinizer-ci.com/g/pustovitDmytro/semantic-release-telegram/badges/quality-score.png?b=master
+[scrutinizer-url]: https://scrutinizer-ci.com/g/pustovitDmytro/semantic-release-telegram/?branch=master
 
-[lgtm-lg-badge]: https://img.shields.io/lgtm/grade/javascript/g/pustovitDmytro/npm-boilerplate.svg?logo=lgtm&logoWidth=18
-[lgtm-lg-url]: https://lgtm.com/projects/g/pustovitDmytro/npm-boilerplate/context:javascript
+[lgtm-lg-badge]: https://img.shields.io/lgtm/grade/javascript/g/pustovitDmytro/semantic-release-telegram.svg?logo=lgtm&logoWidth=18
+[lgtm-lg-url]: https://lgtm.com/projects/g/pustovitDmytro/semantic-release-telegram/context:javascript
 
-[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/npm-boilerplate.svg?logo=lgtm&logoWidth=18
-[lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/npm-boilerplate/alerts/
+[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/g/pustovitDmytro/semantic-release-telegram.svg?logo=lgtm&logoWidth=18
+[lgtm-alerts-url]: https://lgtm.com/projects/g/pustovitDmytro/semantic-release-telegram/alerts/
 
 [codacy-badge]: https://app.codacy.com/project/badge/Grade/8667aa23afaa4725854f098c4b5e8890
-[codacy-url]: https://www.codacy.com/gh/pustovitDmytro/npm-boilerplate/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pustovitDmytro/npm-boilerplate&amp;utm_campaign=Badge_Grade
+[codacy-url]: https://www.codacy.com/gh/pustovitDmytro/semantic-release-telegram/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pustovitDmytro/semantic-release-telegram&amp;utm_campaign=Badge_Grade
 
-[sonarcloud-badge]: https://sonarcloud.io/api/project_badges/measure?project=pustovitDmytro_npm-boilerplate&metric=alert_status
-[sonarcloud-url]: https://sonarcloud.io/dashboard?id=pustovitDmytro_npm-boilerplate
+[sonarcloud-badge]: https://sonarcloud.io/api/project_badges/measure?project=pustovitDmytro_semantic-release-telegram&metric=alert_status
+[sonarcloud-url]: https://sonarcloud.io/dashboard?id=pustovitDmytro_semantic-release-telegram
 
-[npm-downloads-badge]: https://img.shields.io/npm/dw/npm-boilerplate
-[npm-size-badge]: https://img.shields.io/bundlephobia/min/npm-boilerplate
-[npm-size-url]: https://bundlephobia.com/result?p=npm-boilerplate
+[npm-downloads-badge]: https://img.shields.io/npm/dw/semantic-release-telegram
+[npm-size-badge]: https://img.shields.io/bundlephobia/min/semantic-release-telegram
+[npm-size-url]: https://bundlephobia.com/result?p=semantic-release-telegram
