@@ -1,9 +1,18 @@
 {
   "name": "semantic-release-telegram",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "semantic-release plugin. Provides notifications to Telegram chats",
   "main": "./lib",
-  "keywords": ["telegram", "semantic-release", "deploy", "telegram-bot", "bot", "publish", "notify", "notifications"],
+  "keywords": [
+    "telegram",
+    "semantic-release",
+    "deploy",
+    "telegram-bot",
+    "bot",
+    "publish",
+    "notify",
+    "notifications"
+  ],
   "scripts": {
     "prepare": "babel src --out-dir ./lib && husky install",
     "coveralls": "cat ./reports/coverage/lcov.info | coveralls",
