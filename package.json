@@ -91,9 +91,9 @@
     "uuid": "^8.0.0"
   },
   "dependencies": {
-    "base-api-client": "^1.2.0",
-    "livr": "^2.3.3",
-    "livr-extra-rules": "^1.2.1",
-    "myrmidon": "^1.4.5"
+    "base-api-client": "1.2.0",
+    "livr": "2.3.3",
+    "livr-extra-rules": "1.2.1",
+    "myrmidon": "1.4.5"
   }
 }
