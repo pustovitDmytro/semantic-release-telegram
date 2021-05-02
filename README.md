@@ -1,5 +1,5 @@
 # semantic-release-telegram
-**semantic-release-telegram** boilerplate for creating npm packages.
+[semantic-release][sr-url] plugin. Provides notifications to [Telegram][tg-url] chats.
 
 [![Version][badge-vers]][npm]
 [![Bundle size][npm-size-badge]][npm-size-url]
@@ -20,6 +20,8 @@
 [![Commit activity][commit-activity-badge]][github]
 [![Fossa][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
+
+![Usage Sample](.docs/sample-default_templates.png)
 
 ## Table of Contents
   - [Requirements](#requirements)
@@ -42,10 +44,74 @@ To install the library run the following command
 ```
 
 ## Usage
+The plugin can be configured in the semantic-release [configuration file][sr-config]:
 
-```javascript
-
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [ "semantic-release-telegram", {
+      "chats": [ 123456789, -987654321 ]
+    } ]
+  ]
+}
 ```
+This is a minimal usage sample with a default configuration. 
+
+### Configuration
+
+if needed, the configuration can be extended:
+
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["semantic-release-heroku", {
+      "name": "funny-app",
+      "chats": [ 123456789 ],
+      "templates": {
+        "fail"    : "An error occured while trying to publish the new version of <b>{name}</b>.\n<pre><code class='language-javascript'>{error}</code></pre>",
+        "success" : "A new version of <a href='{repository_url}'>{name}</a> has been released. Current version is <b>{version}</b>"
+      }
+
+    }]
+  ]
+}
+```
+Config attribute description:
+
+| Option | Required | Type | Description | Default |
+|----|---|---|------------------------------------|------------------------------------|
+| `name`          | no | ```string```  | Heroku application name.    | name from package.json |
+| `chats`    | yes | ```array``` | List of chats for sending. The bot should have access to each chat. |      |
+| `templates.success`    | no |  ```string```  | HTML template, send in case of success. | [SUCCESS.html](templates/SUCCESS.html) |
+| `templates.fail`    | no |  ```string```  | HTML template, send in case of fail. | [FAIL.html](templates/FAIL.html) |
+
+Template variables:
+
+| key | Templates | Description | Example |
+|----|---|-----------------------|--------|
+| `repository_url` | success, fail | The git repository URL. By default repository property in package.json or git origin url | https://github.com/pustovitDmytro/semantic-release-telegram
+| `name` | success, fail | application name | funny-app
+| `version` | success | new version | 1.0.0
+| `release_notes` | success | generated notes |
+| `release_type` | success | | minor
+| `commit` | success | commit hash | 13b16914f2893fa09e9a39f1dcda78af1fff0dbd
+| `branch` | success, fail | | master
+| `error` | fail | thrown error | SemanticReleaseError: Cannot push to the Git repository
+
+### Authentication
+To use this package, you need to [register](https://core.telegram.org/bots#3-how-do-i-create-a-bot) a new telegram bot. Then pass the next environment variables:
+
+```sh
+  TELEGRAM_BOT_ID=123456 
+  TELEGRAM_BOT_TOKEN=ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+```
+[sr-url]: https://github.com/semantic-release/semantic-release
+[sr-config]: https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration
+[tg-url]: https://telegram.org/
 
 ## Contribute
 
@@ -74,12 +140,14 @@ The message summary should be a one-sentence description of the change. The issu
 [travis]: https://travis-ci.org/pustovitDmytro/semantic-release-telegram
 [coveralls]: https://coveralls.io/github/pustovitDmytro/semantic-release-telegram?branch=master
 [badge-deps]: https://img.shields.io/david/pustovitDmytro/semantic-release-telegram.svg
-[badge-tests]: https://travis-ci.com/pustovitDmytro/semantic-release-telegram.svg?branch=master
 [badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/semantic-release-telegram.svg?style=popout
 [badge-vers]: https://img.shields.io/npm/v/semantic-release-telegram.svg
 [badge-lic]: https://img.shields.io/github/license/pustovitDmytro/semantic-release-telegram.svg
 [badge-coverage]: https://coveralls.io/repos/github/pustovitDmytro/semantic-release-telegram/badge.svg?branch=master
 [url-coverage]: https://coveralls.io/github/pustovitDmytro/semantic-release-telegram?branch=master
+
+[tests-badge]: https://img.shields.io/circleci/build/github/pustovitDmytro/semantic-release-telegram
+[tests-url]: https://app.circleci.com/pipelines/github/pustovitDmytro/semantic-release-telegram
 
 [codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-telegram/badge
 [codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-telegram
