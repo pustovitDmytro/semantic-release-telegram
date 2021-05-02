@@ -1,11 +1,21 @@
 import { getNamespace } from 'cls-hooked';
+import API_ERROR from 'base-api-client/lib/Error';
 import { _load } from './entry';
 
 const { default: API } = _load('telegram/TelegramAPI');
 
 function axiosResponse(data) {
-    return { data };
+    return { data: { result: data } };
 }
+
+function axiosError(message, data) {
+    const err = new Error(message);
+
+    err.response = { data };
+
+    return new API_ERROR(err);
+}
+
 
 export const traces = [];
 const logger = (level, data) => traces.push(data);
@@ -15,7 +25,14 @@ class MOCK_API extends API {
         if (opts.method === 'POST' && opts.url.match('sendMessage')) {
             return axiosResponse();
         }
+        if (opts.url.match('getChat')) {
+            if (opts.data.chat_id === 400) {
+                throw axiosError('Request failed with status code 400', { 'ok': false, 'error_code': 400, 'description': 'Bad Request: chat not found' });
+            }
 
+            return axiosResponse({ username: 'thick' });
+        }
+        console.log(opts);
         throw new Error('unknown');
     }
 

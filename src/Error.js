@@ -22,14 +22,3 @@ export class VERIFICATION_MISSED extends SemanticReleaseTelegramError {
 export class VALIDATION_FAILED extends SemanticReleaseTelegramError {
     message = JSON.stringify(this.payload)
 }
-
-export class API_ERROR extends SemanticReleaseTelegramError {
-    get message() {
-        const messages = [ this.payload.toString() ];
-        const inner  = this.payload.response?.data;
-
-        if (inner) messages.push(JSON.stringify(inner));
-
-        return messages.join(' ');
-    }
-}

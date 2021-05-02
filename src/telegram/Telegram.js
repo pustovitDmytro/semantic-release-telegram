@@ -6,7 +6,7 @@ function dumpChat(chat) {
     return chat.title || chat.username;
 }
 
-export default class Heroku {
+export default class Telegram {
     constructor(botId, dotToken, chats) {
         this.api = new Api(botId, dotToken);
         this.chats = chats;
