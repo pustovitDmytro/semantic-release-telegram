@@ -18,7 +18,6 @@
 [![Coverage Status][badge-coverage]][url-coverage]
 
 [![Commit activity][commit-activity-badge]][github]
-[![Fossa][fossa-badge]][fossa-url]
 [![License][badge-lic]][github]
 
 ![Usage Sample](.docs/sample-default_templates.png)
@@ -151,9 +150,6 @@ The message summary should be a one-sentence description of the change. The issu
 
 [codefactor-badge]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-telegram/badge
 [codefactor-url]: https://www.codefactor.io/repository/github/pustovitdmytro/semantic-release-telegram
-
-[fossa-badge]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FpustovitDmytro%2Fsemantic-release-telegram.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/git%2Bgithub.com%2FpustovitDmytro%2Fsemantic-release-telegram?ref=badge_shield
 
 [commit-activity-badge]: https://img.shields.io/github/commit-activity/m/pustovitDmytro/semantic-release-telegram
 

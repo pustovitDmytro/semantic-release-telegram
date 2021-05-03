@@ -16,6 +16,7 @@ const rules = {
 };
 
 export default async function verifyConditions(pluginConfig, { logger, cwd, env }) {
+    // eslint-disable-next-line security/detect-non-literal-require
     const info = require(path.resolve(cwd, 'package.json'));
     const raw = {
         ...pluginConfig,

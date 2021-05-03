@@ -9,11 +9,13 @@ export default class Test {
     async setTmpFolder() {
         await fse.ensureDir(tmpFolder);
     }
+
     async cleanTmpFolder() {
         await fse.remove(tmpFolder);
     }
 
     mockAPI = mockAPI
+
     unMockAPI = unMockAPI
 
     async getApiCalls(query, { trace = true } = {}) {
@@ -27,6 +29,7 @@ export default class Test {
 
             queryItems.push(`traceId=${traceId}`);
         }
+
         const q = `[*${queryItems.join('&')}]`;
         const res = jsonQuery(q, { data: traces });
 

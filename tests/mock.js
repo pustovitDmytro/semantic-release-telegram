@@ -1,3 +1,4 @@
+/* eslint-disable security/detect-object-injection */
 import { getNamespace } from 'cls-hooked';
 import API_ERROR from 'base-api-client/lib/Error';
 import { _load } from './entry';
@@ -25,6 +26,7 @@ class MOCK_API extends API {
         if (opts.method === 'POST' && opts.url.match('sendMessage')) {
             return axiosResponse();
         }
+
         if (opts.url.match('getChat')) {
             if (opts.data.chat_id === 400) {
                 throw axiosError('Request failed with status code 400', { 'ok': false, 'error_code': 400, 'description': 'Bad Request: chat not found' });
@@ -32,6 +34,7 @@ class MOCK_API extends API {
 
             return axiosResponse({ username: 'thick' });
         }
+
         console.log(opts);
         throw new Error('unknown');
     }
