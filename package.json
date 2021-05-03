@@ -71,7 +71,7 @@
     "danger": "^10.6.4",
     "docopt": "^0.6.2",
     "eslint": "^7.0.0",
-    "eslint-config-webbylab": "^4.0.0",
+    "eslint-config-webbylab": "^5.0.0",
     "eslint-plugin-fetch": "0.0.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-more": "^1.0.0",
