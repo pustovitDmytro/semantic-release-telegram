@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-telegram",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "semantic-release plugin. Provides notifications to Telegram chats",
   "main": "./lib",
   "keywords": [
@@ -76,7 +76,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-more": "^1.0.3",
     "eslint-plugin-security": "^1.4.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "husky": "^6.0.0",
     "jscpd": "^3.3.25",
     "json-query": "^2.2.2",
@@ -90,9 +90,9 @@
     "uuid": "^8.0.0"
   },
   "dependencies": {
-    "base-api-client": "^1.2.0",
-    "livr": "^2.3.3",
-    "livr-extra-rules": "^1.2.1",
-    "myrmidon": "^1.4.5"
+    "base-api-client": "1.2.0",
+    "livr": "2.3.3",
+    "livr-extra-rules": "1.2.1",
+    "myrmidon": "1.4.5"
   }
 }
