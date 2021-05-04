@@ -1,3 +1,26 @@
+## [1.0.2](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.0.1...v1.0.2) (2021-05-04)
+
+
+### Chore
+
+* adds pr context ([ce163d9](https://github.com/pustovitDmytro/semantic-release-telegram/commit/ce163d98af7e779af2242418b9d4fe18deeffb36))
+* adds trusted bots to danger ([892f4a1](https://github.com/pustovitDmytro/semantic-release-telegram/commit/892f4a12a0084464da137d25b1a027e4afb808bd))
+* fixes ci ([0576a01](https://github.com/pustovitDmytro/semantic-release-telegram/commit/0576a013f537d21591b13214c3cf2c1cf33bfa79))
+* telegram notifications on release ([3a8036a](https://github.com/pustovitDmytro/semantic-release-telegram/commit/3a8036a66d1ad82b978bbb356e0ac0cd1b1d1e46))
+* Update dependency @rollup/plugin-node-resolve to v13 ([53e966b](https://github.com/pustovitDmytro/semantic-release-telegram/commit/53e966b519a6cbde286dd11f865d87463de8697a))
+* Update dependency eslint-plugin-more to v1 ([9d6d39c](https://github.com/pustovitDmytro/semantic-release-telegram/commit/9d6d39c7036986acd2ef64f8d712f0a3125565f6))
+* Update dependency fs-extra to v10 ([a0adecc](https://github.com/pustovitDmytro/semantic-release-telegram/commit/a0adecc6b0b58e877bb64aff29e9a42bdc8a9d71))
+* Update dependency fs-extra to v9 ([7b9f56d](https://github.com/pustovitDmytro/semantic-release-telegram/commit/7b9f56d6dd5af6ac514c7e32f5505b6eaea43720))
+* Update issue templates ([8fdb1af](https://github.com/pustovitDmytro/semantic-release-telegram/commit/8fdb1af8db2dbb2cd8912bef867d62b95781fc56))
+* Update pr template ([1d4eb34](https://github.com/pustovitDmytro/semantic-release-telegram/commit/1d4eb34da6085757d1707db0c440c6e245c3e2e3))
+* update semantic to use commit convention ([7e079b2](https://github.com/pustovitDmytro/semantic-release-telegram/commit/7e079b2eaeb424f55b591b124b7f998a092c0988))
+* use danger for internall pr ([d838ede](https://github.com/pustovitDmytro/semantic-release-telegram/commit/d838edef9a425510615b3405d49b8056176f23d8))
+* use incredible eslint config ([b03d74a](https://github.com/pustovitDmytro/semantic-release-telegram/commit/b03d74a4e8e9ee1dcecba72d2137d70dafbf8b73))
+
+### Upgrade
+
+* Update dependency myrmidon to v1.5.0 ([cf4a5a0](https://github.com/pustovitDmytro/semantic-release-telegram/commit/cf4a5a09c6a1b278f387c9a9a7c266b9bcd512f1))
+
 ## [1.0.1](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.0.0...v1.0.1) (2021-05-02)
 
 
