@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.1.0...v1.2.0) (2021-05-07)
+
+
+### New
+
+* adds assets (closes #12) ([95ee7a7](https://github.com/pustovitDmytro/semantic-release-telegram/commit/95ee7a7a1f00bdaa1ba72e2918716fbf9c6b3fab)), closes [#12](https://github.com/pustovitDmytro/semantic-release-telegram/issues/12)
+
 # [1.1.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.0.5...v1.1.0) (2021-05-07)
 
 
