@@ -35,7 +35,10 @@ class MOCK_API extends API {
             return axiosResponse({ username: 'thick' });
         }
 
-        console.log(opts);
+        if (opts.url.match('sendDocument')) {
+            return axiosResponse();
+        }
+
         throw new Error('unknown');
     }
 

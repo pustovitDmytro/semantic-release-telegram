@@ -18,13 +18,24 @@ const rules = {
     templates : [ 'required', { 'nested_object' : {
         success : [ 'string', { default: success } ],
         fail    : [ 'string', { default: fail } ]
-    } } ]
+    } } ],
+    assets : [ { 'list_of' : { or : [
+        { 'nested_object' : {
+            path : [ 'required', 'string' ],
+            name : [ 'string' ]
+        } },
+        { 'nested_object' : {
+            glob : [ 'required', { 'list_of': 'string' }  ],
+            name : [ 'required', 'string' ]
+        } }
+    ] } } ]
 };
 
 export default async function verifyConditions(pluginConfig, { logger, cwd, env, options, branch }) {
     // eslint-disable-next-line security/detect-non-literal-require
     const info = require(path.resolve(cwd, 'package.json'));
     const raw = {
+        assets     : [],
         ...options,
         ...pluginConfig,
         botID      : env.TELEGRAM_BOT_ID,
@@ -44,6 +55,10 @@ export default async function verifyConditions(pluginConfig, { logger, cwd, env,
     const chatTitles = await telegram.test();
 
     logger.log(`Verified chats: ${chatTitles.join(', ')}`);
+    data.assets = data.assets.map(asset => asset.glob
+        ? { ...asset, rootDir: data.rootDir }
+        : asset
+    );
     this.verified = data;
 
     return data;

@@ -58,6 +58,51 @@ test('Positive: valid configuration', async function () {
     assert.deepEqual(apiCall.data, { 'chat_id': 9 });
 });
 
+test('Positive: assets', async function () {
+    const context = {};
+    const assets = [
+        { path: 'CHANGELOG.md' },
+        { glob: [ 'reports/**' ], name: 'reports.zip' }
+    ];
+
+    await verifyConditions.call(
+        context,
+        { chats: [ 9 ], name: 'app', assets },
+        {
+            logger : console,
+            cwd    : process.cwd(),
+            env    : {
+                TELEGRAM_BOT_ID    : 'avxuD60y',
+                TELEGRAM_BOT_TOKEN : 'gmWKbSq7yeq4Z'
+            },
+            options,
+            branch
+        }
+    );
+
+    assert.deepOwnInclude(context.verified, {
+        'botID'      : 'avxuD60y',
+        'botToken'   : 'gmWKbSq7yeq4Z',
+        'branch'     : 'master',
+        'repository' : {
+            url           : options.repositoryUrl,
+            protocol      : 'https',
+            dropHTTPSAuth : true
+        },
+        'chats'     : [ 9 ],
+        'name'      : 'app',
+        'templates' : {
+            'fail'    : 'An <b><i>error</i></b> occured while trying to publish the new version of <b>{name}</b>.\n<pre><code class="language-javascript">{error}</code></pre>',
+            'success' : "A <b><i>{release_type}</i></b> version of <a href='{repository_url}'>{name}</a> has been released. Current version is <b>{version}</b>"
+
+        },
+        assets : [
+            assets[0],
+            { ...assets[1], rootDir: process.cwd() }
+        ]
+    });
+});
+
 
 test('Negative: invalid chat', async function () {
     const promise = verifyConditions.call(

@@ -1,3 +1,4 @@
+import path from 'path';
 import { assert } from 'chai';
 import {  _load } from '../entry';
 import Test from '../Test';
@@ -35,6 +36,21 @@ test('Default template', async function () {
     apiCalls.forEach(item => {
         assert.equal(item.data.text, `A <b><i>patch</i></b> version of <a href='https://bo.sh/amoti'>${verified.name}</a> has been released. Current version is <b>1.0.2</b>`);
     });
+});
+
+test('Positive: assets', async function () {
+    const assets = [
+        { path: 'CHANGELOG.md' },
+        { glob: [ 'templates/**' ], name: 'templates', rootDir: path.resolve(__dirname, '../../') }
+    ];
+
+    const verified = { name: 'test-app', templates, chats: [ 1, 2 ], repository, assets };
+
+    await success.call(
+        { verified },
+        null,
+        { logger: console, nextRelease: { version: '1.0.2', type: 'patch' } }
+    );
 });
 
 test('Negative: missing verify', async function () {

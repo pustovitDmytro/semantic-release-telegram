@@ -1,4 +1,5 @@
 import BaseAPi from 'base-api-client';
+import FormData from 'form-data';
 
 export default class TelegramAPI extends BaseAPi {
     constructor(id, token) {
@@ -18,10 +19,15 @@ export default class TelegramAPI extends BaseAPi {
         });
     }
 
-    sendFile(chatId, fileId) {
-        return this.post('sendDocument', {
-            'document' : fileId,
-            'chat_id'  : chatId
+    sendFile(chatId, stream) {
+        const form = new FormData();
+
+        form.append('document', stream,  { filepath: stream.path });
+        form.append('chat_id', chatId);
+
+        return this.post('sendDocument', form, {
+            headers      : form.getHeaders(),
+            responseType : 'stream'
         });
     }
 
