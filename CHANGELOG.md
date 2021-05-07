@@ -1,3 +1,19 @@
+# [1.1.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.0.5...v1.1.0) (2021-05-07)
+
+
+### Chore
+
+* Update dependency @rollup/plugin-commonjs to v19 ([6d570e2](https://github.com/pustovitDmytro/semantic-release-telegram/commit/6d570e28471f30f6093cb060592271343e4eb290))
+
+### Docs
+
+* update screenshot to match new templates ([5367d10](https://github.com/pustovitDmytro/semantic-release-telegram/commit/5367d10055cda4c739b54c4982f4404399f4c6ef))
+
+### New
+
+* adds release_type to success template ([8d55b82](https://github.com/pustovitDmytro/semantic-release-telegram/commit/8d55b824b5f3af898b9900bf2ee6ba17042a12dc))
+* resolves repo url (closes #13) ([0f670dd](https://github.com/pustovitDmytro/semantic-release-telegram/commit/0f670dd9ced0e59537a637b5da2419dfa59a51e2)), closes [#13](https://github.com/pustovitDmytro/semantic-release-telegram/issues/13)
+
 ## [1.0.5](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.0.4...v1.0.5) (2021-05-05)
 
 
