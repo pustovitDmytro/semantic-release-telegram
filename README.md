@@ -20,8 +20,6 @@
 [![Commit activity][commit-activity-badge]][github]
 [![License][badge-lic]][github]
 
-![Usage Sample](.docs/sample-default_templates.png)
-
 ## Table of Contents
   - [Requirements](#requirements)
   - [Installation](#installation)
@@ -56,7 +54,9 @@ The plugin can be configured in the semantic-release [configuration file][sr-con
   ]
 }
 ```
-This is a minimal usage sample with a default configuration. 
+This is a minimal usage sample with a default configuration. Next messages will be sent:
+
+![Usage Sample](.docs/sample-default_templates.png)
 
 ### Configuration
 

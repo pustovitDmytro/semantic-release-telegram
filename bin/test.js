@@ -24,6 +24,7 @@ async function main(opts) {
         const options = {
             repositoryUrl : 'https://github.com/pustovitDmytro/semantic-release-telegram.git'
         };
+        const branch = { name: 'master' };
 
         if (opts.success) {
             const notes = '# [1.1.0](https://github.com/pustovitDmytro/semantic-release-test/compare/v1.0.0...v1.1.0) (2021-05-01)\n' +
@@ -50,14 +51,16 @@ async function main(opts) {
                 {
                     logger : console,
                     env    : { ...process.env },
-                    cwd    : path.resolve(rootDir)
+                    cwd    : path.resolve(rootDir),
+                    options,
+                    branch
                 }
             );
 
             await success.call(
                 context,
                 {},
-                { logger: console, nextRelease, options }
+                { logger: console, nextRelease }
             );
         }
 
@@ -68,7 +71,9 @@ async function main(opts) {
                 {
                     logger : console,
                     env    : { ...process.env },
-                    cwd    : path.resolve(rootDir)
+                    cwd    : path.resolve(rootDir),
+                    options,
+                    branch
                 }
             );
         }
@@ -86,14 +91,16 @@ async function main(opts) {
                 {
                     logger : console,
                     env    : { ...process.env },
-                    cwd    : path.resolve(rootDir)
+                    cwd    : path.resolve(rootDir),
+                    options,
+                    branch
                 }
             );
 
             await fail.call(
                 context,
                 {},
-                { logger: console, errors, options }
+                { logger: console, errors }
             );
         }
 
