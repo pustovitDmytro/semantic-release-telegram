@@ -4,7 +4,13 @@ import { validate } from './utils';
 import Telegram from './telegram';
 
 const rules = {
-    name      : [ 'string' ],
+    name       : [ 'string' ],
+    branch     : [ 'required', 'string' ],
+    repository : [ 'required', { 'nested_object' : {
+        url           : [ 'required', 'string' ],
+        protocol      : [ { 'one_of': [ 'ssh', 'https' ] }, { default: 'https' } ],
+        dropHTTPSAuth : [ 'boolean', { default: true } ]
+    } } ],
     botID     : [ 'required', 'string' ],
     botToken  : [ 'required', 'string' ],
     chats     : [ 'required', { 'list_of': 'integer' } ],
@@ -15,17 +21,22 @@ const rules = {
     } } ]
 };
 
-export default async function verifyConditions(pluginConfig, { logger, cwd, env }) {
+export default async function verifyConditions(pluginConfig, { logger, cwd, env, options, branch }) {
     // eslint-disable-next-line security/detect-non-literal-require
     const info = require(path.resolve(cwd, 'package.json'));
     const raw = {
+        ...options,
         ...pluginConfig,
-        name      : pluginConfig.name || info.name,
-        botID     : env.TELEGRAM_BOT_ID,
-        botToken  : env.TELEGRAM_BOT_TOKEN,
-        chats     : pluginConfig.chats,
+        botID      : env.TELEGRAM_BOT_ID,
+        botToken   : env.TELEGRAM_BOT_TOKEN,
+        rootDir    : cwd,
+        branch     : branch.name,
+        repository : {
+            url : options.repositoryUrl,
+            ...pluginConfig.repository
+        },
         templates : pluginConfig.templates || {},
-        rootDir   : cwd
+        name      : pluginConfig.name || info.name
     };
 
     const data = validate(raw, rules);

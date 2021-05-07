@@ -12,6 +12,11 @@ before(function () {
     factory.mockAPI();
 });
 
+const options = {
+    repositoryUrl : 'http://ag.bb/goref'
+};
+const branch = { name: 'master' };
+
 test('Positive: valid configuration', async function () {
     const context = {};
 
@@ -24,13 +29,21 @@ test('Positive: valid configuration', async function () {
             env    : {
                 TELEGRAM_BOT_ID    : 'I7ezq',
                 TELEGRAM_BOT_TOKEN : 'TiHdAYgZ6xRTv0'
-            }
+            },
+            options,
+            branch
         }
     );
 
     assert.deepOwnInclude(context.verified, {
-        'botID'     : 'I7ezq',
-        'botToken'  : 'TiHdAYgZ6xRTv0',
+        'botID'      : 'I7ezq',
+        'botToken'   : 'TiHdAYgZ6xRTv0',
+        'branch'     : 'master',
+        'repository' : {
+            url           : options.repositoryUrl,
+            protocol      : 'https',
+            dropHTTPSAuth : true
+        },
         'chats'     : [ 9 ],
         'name'      : 'semantic-release-telegram',
         'templates' : {
@@ -55,7 +68,9 @@ test('Negative: invalid chat', async function () {
             env    : {
                 TELEGRAM_BOT_ID    : 'I7ezq',
                 TELEGRAM_BOT_TOKEN : 'TiHdAYgZ6xRTv0'
-            }
+            },
+            options,
+            branch
         }
     );
 
@@ -72,7 +87,9 @@ test('Negative: inaccesible chat', async function () {
             env    : {
                 TELEGRAM_BOT_ID    : 'I7ezq',
                 TELEGRAM_BOT_TOKEN : 'TiHdAYgZ6xRTv0'
-            }
+            },
+            options,
+            branch
         }
     );
 

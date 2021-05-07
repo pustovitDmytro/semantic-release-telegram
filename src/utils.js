@@ -1,5 +1,6 @@
 import LIVR         from 'livr';
 import extraRules   from 'livr-extra-rules';
+import GitUrlParse from 'git-url-parse';
 import { VALIDATION_FAILED } from './Error';
 
 LIVR.Validator.registerDefaultRules(extraRules);
@@ -17,15 +18,20 @@ export function validate(data, rules) {
     return result;
 }
 
-export function getVariables({ verified, nextRelease, options, branch, error }) {
+export function getVariables({ verified, nextRelease, error }) {
+    const { repository, name, branch } = verified;
+    const repoUrl = GitUrlParse(repository.url);
+
+    if (repository.dropHTTPSAuth && repoUrl.protocol === 'https' && repoUrl.user) repoUrl.user = '';
+
     return {
-        'repository_url' : options?.repositoryUrl,
-        'name'           : verified.name,
+        name,
+        branch,
+        'repository_url' : repoUrl.toString(repository.protocol),
         'version'        : nextRelease?.version,
         'release_notes'  : nextRelease?.notes,
         'release_type'   : nextRelease?.type,
         'commit'         : nextRelease?.commit,
-        'branch'         : branch?.name,
         'error'          : error?.toString()
     };
 }

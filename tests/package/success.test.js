@@ -13,14 +13,19 @@ before(function () {
     factory.mockAPI();
 });
 
+const repository = {
+    url           : 'http://bo.sh/amoti',
+    protocol      : 'https',
+    dropHTTPSAuth : true
+};
+
 test('Default template', async function () {
-    const verified = { name: 'test-app', templates, chats: [ 1, 2 ] };
-    const options = { repositoryUrl: 'http://bo.sh/amoti' };
+    const verified = { name: 'test-app', templates, chats: [ 1, 2 ], repository };
 
     await success.call(
         { verified },
         null,
-        { logger: console, nextRelease: { version: '1.0.2' }, options }
+        { logger: console, nextRelease: { version: '1.0.2', type: 'patch' } }
     );
 
     const apiCalls = await factory.getApiCalls('type=requestSent&url=sendMessage');
@@ -28,7 +33,7 @@ test('Default template', async function () {
     assert.lengthOf(apiCalls, 2);
     assert.deepEqual(apiCalls.map(i => i.data.chat_id), [ 1, 2 ]);
     apiCalls.forEach(item => {
-        assert.equal(item.data.text, `A new version of <a href='${options.repositoryUrl}'>${verified.name}</a> has been released. Current version is <b>1.0.2</b>`);
+        assert.equal(item.data.text, `A new version of <a href='https://bo.sh/amoti'>${verified.name}</a> has been released. Current version is <b>1.0.2</b>`);
     });
 });
 

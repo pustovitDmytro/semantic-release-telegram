@@ -91,6 +91,7 @@
   },
   "dependencies": {
     "base-api-client": "1.2.0",
+    "git-url-parse": "11.4.4",
     "livr": "2.3.3",
     "livr-extra-rules": "1.2.1",
     "myrmidon": "1.4.5"

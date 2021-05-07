@@ -11,15 +11,20 @@ suite('fail');
 before(function () {
     factory.mockAPI();
 });
-const verified = { name: 'test-app', templates, chats: [ 5, 3 ] };
-const options = { repositoryUrl: 'http://bo.sh/amoti' };
+
 const errors = [ new Error('step leather women back material grow relationship') ];
+const repository = {
+    url           : 'http://bo.sh/amoti',
+    protocol      : 'https',
+    dropHTTPSAuth : true
+};
+const verified = { name: 'test-app', templates, chats: [ 5, 3 ], repository };
 
 test('Default template', async function () {
     await fail.call(
         { verified },
         null,
-        { logger: console, errors, options }
+        { logger: console, errors }
     );
 
     const apiCalls = await factory.getApiCalls('type=requestSent&url=sendMessage');
