@@ -32,7 +32,7 @@ test('Default template', async function () {
     assert.lengthOf(apiCalls, 2);
     assert.deepEqual(apiCalls.map(i => i.data.chat_id), [ 5, 3 ]);
     apiCalls.forEach(item => {
-        assert.equal(item.data.text, `An error occured while trying to publish the new version of <b>${verified.name}</b>.\n<pre><code class="language-javascript">Error: step leather women back material grow relationship</code></pre>`);
+        assert.equal(item.data.text, `An <b><i>error</i></b> occured while trying to publish the new version of <b>${verified.name}</b>.\n<pre><code class="language-javascript">Error: step leather women back material grow relationship</code></pre>`);
     });
 });
 

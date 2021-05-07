@@ -33,7 +33,7 @@ test('Default template', async function () {
     assert.lengthOf(apiCalls, 2);
     assert.deepEqual(apiCalls.map(i => i.data.chat_id), [ 1, 2 ]);
     apiCalls.forEach(item => {
-        assert.equal(item.data.text, `A new version of <a href='https://bo.sh/amoti'>${verified.name}</a> has been released. Current version is <b>1.0.2</b>`);
+        assert.equal(item.data.text, `A <b><i>patch</i></b> version of <a href='https://bo.sh/amoti'>${verified.name}</a> has been released. Current version is <b>1.0.2</b>`);
     });
 });
 

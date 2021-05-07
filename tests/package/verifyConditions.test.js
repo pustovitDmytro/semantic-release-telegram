@@ -47,8 +47,9 @@ test('Positive: valid configuration', async function () {
         'chats'     : [ 9 ],
         'name'      : 'semantic-release-telegram',
         'templates' : {
-            'fail'    : 'An error occured while trying to publish the new version of <b>{name}</b>.\n<pre><code class="language-javascript">{error}</code></pre>',
-            'success' : "A new version of <a href='{repository_url}'>{name}</a> has been released. Current version is <b>{version}</b>"
+            'fail'    : 'An <b><i>error</i></b> occured while trying to publish the new version of <b>{name}</b>.\n<pre><code class="language-javascript">{error}</code></pre>',
+            'success' : "A <b><i>{release_type}</i></b> version of <a href='{repository_url}'>{name}</a> has been released. Current version is <b>{version}</b>"
+
         }
     });
 
