@@ -1,7 +1,7 @@
 
 import fs from 'fs';
 import { Stream } from 'stream';
-import { fill, isArray } from 'myrmidon';
+import { fill } from 'myrmidon';
 import archiver from 'archiver';
 import Api from './TelegramAPI';
 
