@@ -55,9 +55,10 @@ export default async function verifyConditions(pluginConfig, { logger, cwd, env,
     const chatTitles = await telegram.test();
 
     logger.log(`Verified chats: ${chatTitles.join(', ')}`);
-    data.assets = data.assets.map(asset => asset.glob
-        ? { ...asset, rootDir: data.rootDir }
-        : asset
+    data.assets = data.assets.map(
+        asset => asset.glob
+            ? { ...asset, rootDir: data.rootDir }
+            : asset
     );
     this.verified = data;
 

@@ -1,7 +1,7 @@
 import { assert } from 'chai';
-import {  _load } from '../entry';
+import { load } from '../Test';
 
-const { getVariables } = _load('utils');
+const { getVariables } = load('utils');
 
 suite('getVariables');
 

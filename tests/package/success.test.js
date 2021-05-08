@@ -1,11 +1,10 @@
 import path from 'path';
 import { assert } from 'chai';
-import {  _load } from '../entry';
-import Test from '../Test';
+import Test, { load } from '../Test';
 import { checkError } from '../utils';
 
-const success = _load('success').default;
-const templates = _load('templates');
+const success = load('success').default;
+const templates = load('templates');
 const factory = new Test();
 
 suite('success');

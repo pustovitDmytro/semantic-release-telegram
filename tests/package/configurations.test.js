@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import entry from '../entry';
-import '../init';
+import '../Test';
 
 suite('Configurations');
 

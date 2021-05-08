@@ -1,9 +1,9 @@
 import { assert } from 'chai';
-import {  _load } from '../entry';
-import Test from '../Test';
+import Test, { load } from '../Test';
 
-const fail = _load('fail').default;
-const templates = _load('templates');
+
+const fail = load('fail').default;
+const templates = load('templates');
 const factory = new Test();
 
 suite('fail');

@@ -1,9 +1,9 @@
 /* eslint-disable security/detect-object-injection */
 import { getNamespace } from 'cls-hooked';
 import API_ERROR from 'base-api-client/lib/Error';
-import { _load } from './entry';
+import { load } from './Test';
 
-const { default: API } = _load('telegram/TelegramAPI');
+const { default: API } = load('telegram/TelegramAPI');
 
 function axiosResponse(data) {
     return { data: { result: data } };

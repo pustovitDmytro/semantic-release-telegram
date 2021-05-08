@@ -1,9 +1,8 @@
 import { assert } from 'chai';
-import {  _load } from '../entry';
-import Test from '../Test';
+import Test, { load } from '../Test';
 import { checkError } from '../utils';
 
-const verifyConditions = _load('verifyConditions').default;
+const verifyConditions = load('verifyConditions').default;
 const factory = new Test();
 
 suite('verifyConditions');
