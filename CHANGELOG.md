@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.0...v1.2.1) (2021-05-07)
+
+
+### Upgrade
+
+* Pin dependencies ([42d97eb](https://github.com/pustovitDmytro/semantic-release-telegram/commit/42d97eb498644c36c3fd2156424594000afd0196))
+
 # [1.2.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.1.0...v1.2.0) (2021-05-07)
 
 
