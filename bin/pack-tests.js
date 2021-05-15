@@ -21,7 +21,8 @@ const COPY = [
 
 const TEST_MODULES = [
     'mocha',
-    'cls-hooked'
+    'cls-hooked',
+    'uuid'
 ];
 
 const resolveIgnoreRegexp = `^(?!${TEST_MODULES.join('|')}).*$`;
