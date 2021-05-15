@@ -1,10 +1,12 @@
-import path from 'path';
 import fse from 'fs-extra';
 import { getNamespace } from 'cls-hooked';
 import jsonQuery from 'json-query';
-import { tmpFolder, entry } from './constants';
+import { tmpFolder } from './constants';
 import { mockAPI, unMockAPI, traces } from  './mock';
 import './init-hooks';
+
+export * from './utils';
+export * from './constants';
 
 export default class Test {
     async setTmpFolder() {
@@ -38,18 +40,3 @@ export default class Test {
     }
 }
 
-function load(relPath) {
-    // eslint-disable-next-line security/detect-non-literal-require
-    return require(path.join(entry, relPath));
-}
-
-function resolve(relPath) {
-    return require.resolve(path.join(entry, relPath));
-}
-
-export {
-    tmpFolder,
-    entry,
-    load,
-    resolve
-};

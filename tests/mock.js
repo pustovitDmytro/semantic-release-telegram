@@ -1,7 +1,7 @@
 /* eslint-disable security/detect-object-injection */
 import { getNamespace } from 'cls-hooked';
 import API_ERROR from 'base-api-client/lib/Error';
-import { load } from './Test';
+import { load } from './utils';
 
 const { default: API } = load('telegram/TelegramAPI');
 
@@ -19,7 +19,6 @@ function axiosError(message, data) {
 
 
 export const traces = [];
-const logger = (level, data) => traces.push(data);
 
 class MOCK_API extends API {
     async _axios(opts) {
@@ -42,8 +41,8 @@ class MOCK_API extends API {
         throw new Error('unknown');
     }
 
-    initLogger() {
-        this.logger = { log: logger };
+    log(level, data) {
+        traces.push(data);
     }
 
     getTraceId() {
@@ -63,7 +62,6 @@ export function mockAPI() {
         API.prototype[methodName] = MOCK_API.prototype[methodName];
     });
 }
-
 
 export function unMockAPI() {
     methods.forEach(methodName => {
