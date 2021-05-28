@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.4...v1.2.5) (2021-05-28)
+
+
+### Upgrade
+
+* Update dependency base-api-client to v1.4.4 ([5d12eb9](https://github.com/pustovitDmytro/semantic-release-telegram/commit/5d12eb9c91c1f0e2193bdef490bec4dc2c91ad5a))
+
 ## [1.2.4](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.3...v1.2.4) (2021-05-28)
 
 
