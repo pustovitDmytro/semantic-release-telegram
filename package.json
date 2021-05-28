@@ -92,7 +92,7 @@
   },
   "dependencies": {
     "archiver": "5.3.0",
-    "base-api-client": "1.4.2",
+    "base-api-client": "1.4.4",
     "form-data": "4.0.0",
     "fs-extra": "10.0.0",
     "git-url-parse": "11.4.4",
