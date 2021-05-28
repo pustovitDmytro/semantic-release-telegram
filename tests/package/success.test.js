@@ -55,7 +55,7 @@ test('Positive: assets', async function () {
 test('Negative: missing verify', async function () {
     const promise = success.call(
         {},
-        { },
+        {},
         {
             logger : console
         }

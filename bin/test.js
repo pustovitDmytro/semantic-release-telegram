@@ -32,6 +32,7 @@ async function main(opts) {
             '\n' +
             '### New\n' +
             '\n' +
+            // eslint-disable-next-line no-secrets/no-secrets
             '* adds log ([13b1691](https://github.com/pustovitDmytro/semantic-release-test/commit/13b16914f2893fa09e9a39f1dcda78af1fff0dbd))\n' +
             '\n' +
             '\n' +
@@ -66,7 +67,7 @@ async function main(opts) {
 
         if (opts.verifyConditions) {
             await verifyConditions.call(
-                {  },
+                {},
                 { chats },
                 {
                     logger : console,

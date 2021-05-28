@@ -18,6 +18,7 @@ function axiosError(message, data) {
 }
 
 
+// eslint-disable-next-line sonarjs/no-unused-collection
 export const traces = [];
 
 class MOCK_API extends API {

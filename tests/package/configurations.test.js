@@ -1,21 +1,17 @@
 import { assert } from 'chai';
-import entry from '../entry';
+import { verifyConditions, success, fail } from '../entry';
 import '../Test';
 
 suite('Configurations');
 
-test('Default configuration', function () {
-    assert.exists(entry);
-});
-
 test('verifyConditions', function () {
-    assert.isFunction(entry.verifyConditions);
+    assert.isFunction(verifyConditions);
 });
 
 test('success', function () {
-    assert.isFunction(entry.success);
+    assert.isFunction(success);
 });
 
 test('fail', function () {
-    assert.isFunction(entry.fail);
+    assert.isFunction(fail);
 });

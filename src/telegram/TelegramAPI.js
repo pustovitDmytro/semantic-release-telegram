@@ -1,7 +1,8 @@
-import BaseAPi from 'base-api-client';
+/* eslint-disable unicorn/filename-case */
+import BaseAPI from 'base-api-client';
 import FormData from 'form-data';
 
-export default class TelegramAPI extends BaseAPi {
+export default class TelegramAPI extends BaseAPI {
     constructor(id, token) {
         super(`https://api.telegram.org/bot${id}:${token}`);
     }

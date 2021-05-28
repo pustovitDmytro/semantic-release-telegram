@@ -39,6 +39,7 @@ test('Drop basic auth in https url', async function () {
     const verified = {
         repository : {
             ...repository,
+            // eslint-disable-next-line no-secrets/no-secrets
             url : 'https://a943eb35-1103-578a-84eb-b7320f67b076@github.com/pustovitDmytro/semantic-release-telegram.git'
         }
     };

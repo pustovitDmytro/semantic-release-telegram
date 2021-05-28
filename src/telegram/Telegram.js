@@ -50,6 +50,6 @@ export default class Telegram {
     async test() {
         const chats = await Promise.all(this.chats.map(chat => this.api.test(chat)));
 
-        return chats.map(dumpChat);
+        return chats.map((element) => dumpChat(element));
     }
 }

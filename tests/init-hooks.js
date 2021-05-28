@@ -16,9 +16,9 @@ beforeEach(function setClsFromContext() {
                     body  : this.test.body,
                     id    : this.test._TRACE_ID
                 });
-                Promise.resolve(old.apply(this, arguments))
-                    .then(res)
-                    .catch(rej);
+                Promise.resolve(Reflect.apply(old, this, arguments))
+                    // eslint-disable-next-line promise/prefer-await-to-then
+                    .then(res).catch(rej);
             });
         });
     };
