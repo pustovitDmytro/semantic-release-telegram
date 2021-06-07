@@ -92,7 +92,7 @@
     "jscpd": "^3.3.25",
     "json-query": "^2.2.2",
     "lockfile-lint": "^4.6.2",
-    "mocha": "^8.0.0",
+    "mocha": "^9.0.0",
     "mocha-junit-reporter": "^2.0.0",
     "nyc": "^15.0.0",
     "rollup": "^2.46.0",
