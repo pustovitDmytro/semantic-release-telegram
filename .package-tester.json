@@ -1,0 +1,5 @@
+{
+    "dir": "tmp/package-tests",
+    "modules": [ "cls-hooked", "uuid" ],
+    "copyDefaultFiles": true
+}
