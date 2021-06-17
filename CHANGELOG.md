@@ -1,3 +1,14 @@
+## [1.2.8](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.7...v1.2.8) (2021-06-17)
+
+
+### Chore
+
+* Update dependency eslint-plugin-regexp to ^0.12.0 ([fd87073](https://github.com/pustovitDmytro/semantic-release-telegram/commit/fd8707365f80ea5594fba37d343b9965a5d612bc))
+
+### Upgrade
+
+* Update dependency base-api-client to v1.4.5 ([9fb2bc8](https://github.com/pustovitDmytro/semantic-release-telegram/commit/9fb2bc839180390a9364ca651f3ce602e083b9a2))
+
 ## [1.2.7](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.6...v1.2.7) (2021-06-13)
 
 
