@@ -1,3 +1,14 @@
+## [1.2.9](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.8...v1.2.9) (2021-07-02)
+
+
+### Chore
+
+* Lock file maintenance ([820de87](https://github.com/pustovitDmytro/semantic-release-telegram/commit/820de87a1a0a47beeacd6b8bbeb81cd94723b904))
+
+### Upgrade
+
+* Update dependency git-url-parse to v11.5.0 ([04b2b9b](https://github.com/pustovitDmytro/semantic-release-telegram/commit/04b2b9b5eb541a20c30085919019fde4675ab89b))
+
 ## [1.2.8](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.7...v1.2.8) (2021-06-17)
 
 
