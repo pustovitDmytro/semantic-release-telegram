@@ -1,3 +1,17 @@
+## [1.2.10](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.9...v1.2.10) (2021-07-14)
+
+
+### Chore
+
+* Update dependency eslint-plugin-regexp to ^0.13.0 ([68f3368](https://github.com/pustovitDmytro/semantic-release-telegram/commit/68f33687b271b837dd73a239c9c3c5224ed224ec))
+* Update dependency eslint-plugin-sonarjs to ^0.9.0 ([2a973fa](https://github.com/pustovitDmytro/semantic-release-telegram/commit/2a973fafec898c1b2bb7cb4c6b2fb1fae32b6a0e))
+* Update dependency eslint-plugin-unicorn to v34 ([3e1b5ee](https://github.com/pustovitDmytro/semantic-release-telegram/commit/3e1b5ee09e07b0402b7948be2ab9a6ebcf8e2312))
+* Update dependency husky to v7 ([3718b62](https://github.com/pustovitDmytro/semantic-release-telegram/commit/3718b62c6047e9318a39326c43ac7ad92246a405))
+
+### Upgrade
+
+* Update dependency myrmidon to v1.5.8 ([5819c0a](https://github.com/pustovitDmytro/semantic-release-telegram/commit/5819c0ab690ab003b8e1f5de21405fbaee5b8b9a))
+
 ## [1.2.9](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.8...v1.2.9) (2021-07-02)
 
 
