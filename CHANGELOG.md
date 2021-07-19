@@ -1,3 +1,10 @@
+## [1.2.12](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.11...v1.2.12) (2021-07-19)
+
+
+### Upgrade
+
+* Update dependency myrmidon to v1.6.1 ([306881a](https://github.com/pustovitDmytro/semantic-release-telegram/commit/306881a8b5e84b0ab16c7a7e99d9650f59c998e5))
+
 ## [1.2.11](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.10...v1.2.11) (2021-07-17)
 
 
