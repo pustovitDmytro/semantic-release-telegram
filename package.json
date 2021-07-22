@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-telegram",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "description": "semantic-release plugin. Provides notifications to Telegram chats",
   "main": "./lib",
   "keywords": [
