@@ -1,3 +1,10 @@
+## [1.2.16](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.15...v1.2.16) (2021-09-10)
+
+
+### Upgrade
+
+* package.json & package-lock.json to reduce vulnerabilities (#47) ([fce56d1](https://github.com/pustovitDmytro/semantic-release-telegram/commit/fce56d1d5fca4759f7a48b365ce0f02228a9815b)), closes [#47](https://github.com/pustovitDmytro/semantic-release-telegram/issues/47)
+
 ## [1.2.15](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.14...v1.2.15) (2021-09-09)
 
 
