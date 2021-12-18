@@ -100,7 +100,7 @@
     "livr": "2.3.3",
     "livr-extra-rules": "1.2.1",
     "myrmidon": "1.6.1",
-    "remark-parse": "9.0.0",
+    "remark-parse": "10.0.1",
     "unified": "9.2.2"
   }
 }
