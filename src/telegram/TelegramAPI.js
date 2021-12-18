@@ -11,12 +11,12 @@ export default class TelegramAPI extends BaseAPI {
         return res.data.result;
     }
 
-    sendMessage(chatId, html) {
+    sendMessage(chatId, html, preview = false) {
         return this.post('sendMessage', {
             'parse_mode'               : 'HTML',
             'text'                     : html,
             'chat_id'                  : chatId,
-            'disable_web_page_preview' : true
+            'disable_web_page_preview' : !preview
         });
     }
 

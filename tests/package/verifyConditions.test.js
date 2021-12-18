@@ -141,6 +141,38 @@ test('Negative: inaccesible chat', async function () {
     await checkError(promise, 'API_ERROR', 'Error: Request failed with status code 400 {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}');
 });
 
+
+test('Positive: telegra.ph', async function () {
+    const telegraph = {
+        title   : '{name} v.{version}',
+        message : '<a href=\'{telegraph_url}\'>Release Notes</a>',
+        content : '{release_notes}'
+    };
+
+    const context = {};
+
+    await verifyConditions.call(
+        context,
+        { chats: [ 9 ], name: 'app', 'telegra.ph': telegraph },
+        {
+            logger : console,
+            cwd    : process.cwd(),
+            env    : {
+                TELEGRAM_BOT_ID    : 'avxuD60y',
+                TELEGRAM_BOT_TOKEN : 'gmWKbSq7yeq4Z'
+            },
+            options,
+            branch
+        }
+    );
+
+    assert.lengthOf(await factory.getApiCalls('type=requestSent&url=createAccount'), 1);
+    assert.lengthOf(await factory.getApiCalls('type=requestSent&url=getAccountInfo'), 1);
+
+    assert.exists(context.verified['telegra.ph']);
+    assert.exists(context.verified['telegra.ph'].token);
+});
+
 after(function () {
     factory.unMockAPI();
 });

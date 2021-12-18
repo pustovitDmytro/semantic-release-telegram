@@ -72,7 +72,7 @@ if needed, the configuration can be extended:
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    ["semantic-release-heroku", {
+    ["semantic-release-telegram", {
       "name": "funny-app",
       "chats": [ 123456789 ],
       "templates": {
@@ -92,6 +92,8 @@ Config attribute description:
 | `chats`    | yes | ```array``` | List of chats for sending. The bot should have access to each chat. |      |
 | `templates.success`    | no |  ```string```  | HTML template, send in case of success. | [SUCCESS.html](templates/SUCCESS.html) |
 | `templates.fail`    | no |  ```string```  | HTML template, send in case of fail. | [FAIL.html](templates/FAIL.html) |
+| `assets`    | no |  ```array```  | List of files to upload. See [Assets](#assets) | `[]` |
+| `telegra.ph`    | no |  ```object```  | Publish and attach [Telegraph](#Telegraph) story | `null` |
 
 Template variables:
 
@@ -113,6 +115,37 @@ To use this package, you need to [register](https://core.telegram.org/bots#3-how
   TELEGRAM_BOT_ID=123456 
   TELEGRAM_BOT_TOKEN=ABC-DEF1234ghIkl-zyx57W2v1u123ew11
 ```
+
+### Assets
+
+Can be [glob](https://github.com/isaacs/node-glob#glob-primer) or relative file path. `name` specifies file label in telegram. In the case of glob pattern, all files are uploaded in a single archive, `name` is required.
+
+Example:
+
+```json
+  "assets" : [
+        { "path": "README.md" },
+        { "glob": [ ".docs/*" ], "name": "Documentation.zip" }
+    ]
+```
+
+Assets will be attached to release message as separate files.
+### Telegraph
+
+Upload bulky markdowns, as [telegra.ph](https://telegra.ph/) stories. Use next api for this:
+
+```json
+  "telegra.ph"  : {
+    "title"   : "{name} v.{version}",
+    "message" : "<a href='{telegraph_url}'>Release Notes</a>",
+    "content" : "{release_notes}"
+}
+```
+
+`title` and `content` represent story content.
+
+`message` is a telegram message, sent to telegram chats (It is reasonable to include `{telegraph_url}` here). Success template is extended with new variables `{telegraph_url}` and `{telegraph_title}` when `telegra.ph` is used.
+
 [sr-url]: https://github.com/semantic-release/semantic-release
 [sr-config]: https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration
 [tg-url]: https://telegram.org/

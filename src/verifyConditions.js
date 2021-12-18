@@ -1,7 +1,7 @@
 import path from 'path';
 import { success, fail } from './templates';
 import { validate } from './utils';
-import Telegram from './telegram';
+import Telegram, { Telegraph } from './telegram';
 
 const rules = {
     name       : [ 'string' ],
@@ -28,16 +28,24 @@ const rules = {
             glob : [ 'required', { 'list_of': 'string' }  ],
             name : [ 'required', 'string' ]
         } }
-    ] } } ]
+    ] } } ],
+    'telegra.ph' : { 'nested_object' : {
+        title   : [ 'required', 'string' ],
+        content : [ 'required', 'string' ],
+        message : [ 'required', 'string' ]
+    } }
 };
 
 export default async function verifyConditions(pluginConfig, { logger, cwd, env, options, branch }) {
     // eslint-disable-next-line security/detect-non-literal-require
     const info = require(path.resolve(cwd, 'package.json'));
-    const raw = {
-        assets     : [],
+    const opts = {
         ...options,
-        ...pluginConfig,
+        ...pluginConfig
+    };
+
+    const raw = {
+        ...opts,
         botID      : env.TELEGRAM_BOT_ID,
         botToken   : env.TELEGRAM_BOT_TOKEN,
         rootDir    : cwd,
@@ -46,8 +54,10 @@ export default async function verifyConditions(pluginConfig, { logger, cwd, env,
             url : options.repositoryUrl,
             ...pluginConfig.repository
         },
-        templates : pluginConfig.templates || {},
-        name      : pluginConfig.name || info.name
+
+        assets    : opts.assets || [],
+        templates : opts.templates || {},
+        name      : opts.name || info.name
     };
 
     const data = validate(raw, rules);
@@ -55,6 +65,19 @@ export default async function verifyConditions(pluginConfig, { logger, cwd, env,
     const chatTitles = await telegram.test();
 
     logger.log(`Verified chats: ${chatTitles.join(', ')}`);
+
+    if (data['telegra.ph']) {
+        const telegraph = new Telegraph();
+
+        const token = await telegraph.authorize();
+        const account = await telegraph.test();
+
+        logger.log(`Verified telegra.ph account ${account}`);
+
+        // eslint-disable-next-line require-atomic-updates
+        data['telegra.ph'].token = token;
+    }
+
     data.assets = data.assets.map(
         asset => asset.glob
             ? { ...asset, rootDir: data.rootDir }

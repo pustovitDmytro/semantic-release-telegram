@@ -1,5 +1,6 @@
 import path from 'path';
 import { assert } from 'chai';
+import FormData from 'form-data';
 import Test, { load } from '../Test';
 import { checkError } from '../utils';
 
@@ -50,6 +51,49 @@ test('Positive: assets', async function () {
         null,
         { logger: console, nextRelease: { version: '1.0.2', type: 'patch' } }
     );
+
+    const apiCalls = await factory.getApiCalls('type=requestSent&url=sendDocument');
+
+    assert.lengthOf(apiCalls, 2 * 2);
+
+    for (const form of  apiCalls.map(r => r.data)) {
+        assert.instanceOf(form, FormData);
+    }
+});
+
+
+test('Positive: telegra.ph', async function () {
+    const telegraph = {
+        title   : '{name} v.{version}',
+        message : '<a href=\'{telegraph_url}\'>Release Notes</a>',
+        content : '{release_notes}'
+    };
+
+    const notes = `
+## [1.2.15](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.14...v1.2.15) (2021-09-09)
+
+### Chore
+
+* fixes audit [devDependencies] ([d08b1fc](https://github.com/pustovitDmytro/semantic-release-telegram/commit/d08b1fc075b7eef59c59f755e1ee96748824e415))
+
+### Upgrade
+
+* Update dependency git-url-parse to v11.6.0 ([0ee4167](https://github.com/pustovitDmytro/semantic-release-telegram/commit/0ee4167d974808539e5b749ec2d43fc61599d8eb))
+`;
+
+    const verified = { name: 'test-app', templates, chats: [ 1, 2 ], repository, 'telegra.ph': telegraph };
+
+    await success.call(
+        { verified },
+        null,
+        { 
+            logger: console, 
+            nextRelease: { version: '1.0.2', type: 'patch', notes } 
+        }
+    );
+
+    assert.lengthOf(await factory.getApiCalls('type=requestSent&url=createPage'), 1);
+    assert.lengthOf(await factory.getApiCalls('type=requestSent&url=sendMessage'), 2*2);
 });
 
 test('Negative: missing verify', async function () {

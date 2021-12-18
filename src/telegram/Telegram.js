@@ -29,10 +29,17 @@ export default class Telegram {
         this.chats = chats;
     }
 
-    async send(template, variables, files = []) {
+    async send(template, variables, { files = [], telegraph } = {}) {
         const html = fill(template, variables);
         const promises = this.chats.map(async chat => {
             await this.api.sendMessage(chat, html);
+
+            if (telegraph?.message) {
+                const telegraphHtml = fill(telegraph.message, variables);
+
+                await this.api.sendMessage(chat, telegraphHtml, true);
+            }
+
             await Promise.all(files.map(async file => {
                 const stream = file.glob
                     ? getArchiveStream(file.glob, file.rootDir)
