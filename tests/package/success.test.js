@@ -56,8 +56,8 @@ test('Positive: assets', async function () {
 
     assert.lengthOf(apiCalls, 2 * 2);
 
-    for (const form of  apiCalls.map(r => r.data)) {
-        assert.instanceOf(form, FormData);
+    for (const form of apiCalls.map(r => r.data)) {
+        assert.isNotEmpty(form.getBoundary());
     }
 });
 
