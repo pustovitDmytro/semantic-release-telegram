@@ -1,6 +1,5 @@
 import path from 'path';
 import { assert } from 'chai';
-import FormData from 'form-data';
 import Test, { load } from '../Test';
 import { checkError } from '../utils';
 
@@ -74,11 +73,11 @@ test('Positive: telegra.ph', async function () {
 
 ### Chore
 
-* fixes audit [devDependencies] ([d08b1fc](https://github.com/pustovitDmytro/semantic-release-telegram/commit/d08b1fc075b7eef59c59f755e1ee96748824e415))
+* fixes audit [devDependencies] ([d08b1fc](https://github.com/pustovitDmytro/semantic-release-telegram/commit/11))
 
 ### Upgrade
 
-* Update dependency git-url-parse to v11.6.0 ([0ee4167](https://github.com/pustovitDmytro/semantic-release-telegram/commit/0ee4167d974808539e5b749ec2d43fc61599d8eb))
+* Update dependency git-url-parse to v11.6.0 ([1](https://github.com/pustovitDmytro/semantic-release-telegram/commit/s))
 `;
 
     const verified = { name: 'test-app', templates, chats: [ 1, 2 ], repository, 'telegra.ph': telegraph };
@@ -86,14 +85,14 @@ test('Positive: telegra.ph', async function () {
     await success.call(
         { verified },
         null,
-        { 
-            logger: console, 
-            nextRelease: { version: '1.0.2', type: 'patch', notes } 
+        {
+            logger      : console,
+            nextRelease : { version: '1.0.2', type: 'patch', notes }
         }
     );
 
     assert.lengthOf(await factory.getApiCalls('type=requestSent&url=createPage'), 1);
-    assert.lengthOf(await factory.getApiCalls('type=requestSent&url=sendMessage'), 2*2);
+    assert.lengthOf(await factory.getApiCalls('type=requestSent&url=sendMessage'), 2 * 2);
 });
 
 test('Negative: missing verify', async function () {
