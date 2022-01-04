@@ -158,7 +158,7 @@ Make the changes to the code and tests. Then commit to your branch. Be sure to f
 [github]: https://github.com/pustovitDmytro/semantic-release-telegram
 [travis]: https://travis-ci.org/pustovitDmytro/semantic-release-telegram
 [coveralls]: https://coveralls.io/github/pustovitDmytro/semantic-release-telegram?branch=master
-[badge-deps]: https://img.shields.io/david/pustovitDmytro/semantic-release-telegram.svg
+[badge-deps]: https://img.shields.io/librariesio/release/npm/semantic-release-telegram.svg
 [badge-vuln]: https://img.shields.io/snyk/vulnerabilities/npm/semantic-release-telegram.svg?style=popout
 [badge-vers]: https://img.shields.io/npm/v/semantic-release-telegram.svg
 [badge-lic]: https://img.shields.io/github/license/pustovitDmytro/semantic-release-telegram.svg
