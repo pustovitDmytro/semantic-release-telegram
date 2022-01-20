@@ -63,7 +63,7 @@
     "cls-hooked": "^4.2.2",
     "conventional-changelog-eslint": "^3.0.9",
     "coveralls": "^3.1.1",
-    "danger": "^10.6.6",
+    "danger": "^10.8.0",
     "docopt": "^0.6.2",
     "eslint": "^7.32.0",
     "eslint-config-incredible": "^2.3.4",
