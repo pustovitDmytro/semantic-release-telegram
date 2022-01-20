@@ -11,7 +11,8 @@
     "bot",
     "publish",
     "notify",
-    "notifications"
+    "notifications",
+    "telegra.ph"
   ],
   "scripts": {
     "prepare": "babel src --out-dir ./lib --copy-files && husky install",
@@ -101,6 +102,7 @@
     "livr-extra-rules": "1.2.1",
     "myrmidon": "1.6.1",
     "remark-parse": "9.0.0",
+    "remark-telegraph": "1.0.1",
     "unified": "9.2.2"
   }
 }
