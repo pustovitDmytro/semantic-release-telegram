@@ -1,21 +1,15 @@
-import LIVR         from 'livr';
-import extraRules   from 'livr-extra-rules';
+import cottus from 'cottus';
 import GitUrlParse from 'git-url-parse';
 import { VALIDATION_FAILED } from './Error';
 
-LIVR.Validator.registerDefaultRules(extraRules);
-
 export function validate(data, rules) {
-    const validator = new LIVR.Validator(rules).prepare();
-    const result = validator.validate(data);
+    const validator = cottus.compile([ 'required', { 'attributes': rules } ]);
 
-    if (!result) {
-        const fields = validator.getErrors();
-
-        throw new VALIDATION_FAILED(fields);
+    try {
+        return validator.validate(data);
+    } catch (error) {
+        throw new VALIDATION_FAILED(JSON.parse(error.prettify));
     }
-
-    return result;
 }
 
 export function getVariables({ verified, nextRelease, error }) {

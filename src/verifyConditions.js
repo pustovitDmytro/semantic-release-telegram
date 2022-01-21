@@ -6,30 +6,30 @@ import Telegram, { Telegraph } from './telegram';
 const rules = {
     name       : [ 'string' ],
     branch     : [ 'required', 'string' ],
-    repository : [ 'required', { 'nested_object' : {
+    repository : [ 'required', { 'attributes' : {
         url           : [ 'required', 'string' ],
-        protocol      : [ { 'one_of': [ 'ssh', 'https' ] }, { default: 'https' } ],
+        protocol      : [ { 'enum': [ 'ssh', 'https' ] }, { default: 'https' } ],
         dropHTTPSAuth : [ 'boolean', { default: true } ]
     } } ],
     botID     : [ 'required', 'string' ],
     botToken  : [ 'required', 'string' ],
-    chats     : [ 'required', { 'list_of': 'integer' } ],
+    chats     : [ 'required', { 'every': 'integer' } ],
     rootDir   : [ 'required', 'string' ],
-    templates : [ 'required', { 'nested_object' : {
+    templates : [ 'required', { 'attributes' : {
         success : [ 'string', { default: success } ],
         fail    : [ 'string', { default: fail } ]
     } } ],
-    assets : [ { 'list_of' : { or : [
-        { 'nested_object' : {
+    assets : [ { 'every' : { or : [
+        { 'attributes' : {
             path : [ 'required', 'string' ],
             name : [ 'string' ]
         } },
-        { 'nested_object' : {
-            glob : [ 'required', { 'list_of': 'string' }  ],
+        { 'attributes' : {
+            glob : [ 'required', { 'every': 'string' }  ],
             name : [ 'required', 'string' ]
         } }
     ] } } ],
-    'telegra.ph' : { 'nested_object' : {
+    'telegra.ph' : { 'attributes' : {
         title   : [ 'required', 'string' ],
         content : [ 'required', 'string' ],
         message : [ 'required', 'string' ]

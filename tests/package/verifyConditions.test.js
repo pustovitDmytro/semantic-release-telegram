@@ -96,7 +96,7 @@ test('Positive: assets', async function () {
 
         },
         assets : [
-            assets[0],
+            { path: 'CHANGELOG.md', name: undefined },
             { ...assets[1], rootDir: process.cwd() }
         ]
     });
@@ -106,7 +106,7 @@ test('Positive: assets', async function () {
 test('Negative: invalid chat', async function () {
     const promise = verifyConditions.call(
         {},
-        { chats: [ 'abc' ] },
+        { chats: [ 12_345, 'abc' ] },
         {
             logger : console,
             cwd    : process.cwd(),
@@ -119,7 +119,7 @@ test('Negative: invalid chat', async function () {
         }
     );
 
-    await checkError(promise, 'VALIDATION_FAILED', '{"chats":["NOT_INTEGER"]}');
+    await checkError(promise, 'VALIDATION_FAILED', '{"chats":[null,"NOT_NUMBER: The value is not a number or could not be cast to a number"]}');
 });
 
 test('Negative: inaccesible chat', async function () {
