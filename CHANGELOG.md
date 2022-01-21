@@ -1,3 +1,23 @@
+# [1.4.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.3.0...v1.4.0) (2022-01-20)
+
+
+### Chore
+
+* (ci) fix gitleaks version ([badd1c1](https://github.com/pustovitDmytro/semantic-release-telegram/commit/badd1c1f473e4b3b3cac41996ce3b2212281b131))
+* fix lint ([6faae88](https://github.com/pustovitDmytro/semantic-release-telegram/commit/6faae885cf4de855ed355d102fd859e6d9d40177))
+* fixes some npm audit vulnerabilities ([9330c38](https://github.com/pustovitDmytro/semantic-release-telegram/commit/9330c3847084d753e1c1969bc96f109c67e7e847))
+* fixes some npm audit vulnerabilities ([f7a14d5](https://github.com/pustovitDmytro/semantic-release-telegram/commit/f7a14d5d00fb5aa6f2e5a02069958114562ba185))
+* replace appveyor to actions ([13aff75](https://github.com/pustovitDmytro/semantic-release-telegram/commit/13aff75ca141f20997a700b138db61836cff06b5))
+* update deps badge ([0836169](https://github.com/pustovitDmytro/semantic-release-telegram/commit/0836169878ed6749127174f56cde02b91fdd69cb))
+
+### Fix
+
+* [security] update dependencies to resolve audit issues ([389e02b](https://github.com/pustovitDmytro/semantic-release-telegram/commit/389e02b1bc4179908d2c6ed151134aa7e1e3324b))
+
+### Update
+
+* move remark-telegraph to separate package ([2cba043](https://github.com/pustovitDmytro/semantic-release-telegram/commit/2cba043bf4ad6ab59cdde6c73ca6f77fc7258267))
+
 # [1.3.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.2.16...v1.3.0) (2021-12-18)
 
 
