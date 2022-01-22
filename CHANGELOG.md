@@ -1,3 +1,16 @@
+## [1.5.1](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.5.0...v1.5.1) (2022-01-22)
+
+
+### Chore
+
+* adds telegra.ph release notes ([aa811a5](https://github.com/pustovitDmytro/semantic-release-telegram/commit/aa811a517e60cfdf194191a4f7629773e3b4ccc8))
+* calc fossa results in cirrus ([b2b48c1](https://github.com/pustovitDmytro/semantic-release-telegram/commit/b2b48c149377cdfc6395e35b44d523ad73c370f7))
+* upgrade semantic-release to v.19 [security] ([0888454](https://github.com/pustovitDmytro/semantic-release-telegram/commit/08884548499894d6a5298a1be3d107defce5c419))
+
+### Docs
+
+* update year in license ([e2dec02](https://github.com/pustovitDmytro/semantic-release-telegram/commit/e2dec024ae5885cd6c4a41d68b3a2ad910a2c7ea))
+
 # [1.5.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.4.0...v1.5.0) (2022-01-21)
 
 
