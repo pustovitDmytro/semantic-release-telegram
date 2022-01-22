@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.4.0...v1.5.0) (2022-01-21)
+
+
+### New
+
+* integrate cottus validator ([45f5ba6](https://github.com/pustovitDmytro/semantic-release-telegram/commit/45f5ba6644dcd9d6bb3a788734dc4cc5bdca3769))
+
 # [1.4.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.3.0...v1.4.0) (2022-01-20)
 
 
