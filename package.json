@@ -94,14 +94,14 @@
   },
   "dependencies": {
     "archiver": "5.3.0",
-    "base-api-client": "1.5.3",
-    "cottus": "1.10.2",
+    "base-api-client": "1.5.8",
+    "cottus": "1.10.6",
     "form-data": "4.0.0",
     "fs-extra": "10.0.0",
     "git-url-parse": "11.6.0",
-    "myrmidon": "1.6.1",
+    "myrmidon": "1.7.2",
     "remark-parse": "9.0.0",
-    "remark-telegraph": "1.0.1",
+    "remark-telegraph": "1.0.4",
     "unified": "9.2.2"
   }
 }
