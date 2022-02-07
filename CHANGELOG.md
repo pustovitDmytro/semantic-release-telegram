@@ -1,3 +1,18 @@
+## [1.5.2](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.5.1...v1.5.2) (2022-02-07)
+
+
+### Chore
+
+* fixes some npm audit vulnerabilities (#73) ([30c5480](https://github.com/pustovitDmytro/semantic-release-telegram/commit/30c5480d8bc74637ff977f25ea5e41965611bc61)), closes [#73](https://github.com/pustovitDmytro/semantic-release-telegram/issues/73)
+* fixes some npm audit vulnerabilities (#76) ([47a36ec](https://github.com/pustovitDmytro/semantic-release-telegram/commit/47a36ec53896f163973b2255f5a210cc180fa130)), closes [#76](https://github.com/pustovitDmytro/semantic-release-telegram/issues/76)
+* Lock file maintenance (#55) ([07a6576](https://github.com/pustovitDmytro/semantic-release-telegram/commit/07a6576465e3749b6c0f753421b4ed3beafa9107)), closes [#55](https://github.com/pustovitDmytro/semantic-release-telegram/issues/55)
+* Lock file maintenance (#72) ([c092cd1](https://github.com/pustovitDmytro/semantic-release-telegram/commit/c092cd1d1c4b1aa21073cfa6c29f2f156ad86b4c)), closes [#72](https://github.com/pustovitDmytro/semantic-release-telegram/issues/72)
+* Update devDependencies (non-major) (#58) ([2378225](https://github.com/pustovitDmytro/semantic-release-telegram/commit/2378225c21ac65d37fed8316587192af217cb229)), closes [#58](https://github.com/pustovitDmytro/semantic-release-telegram/issues/58)
+
+### Upgrade
+
+* Update pustovitDmytro's packages (#78) ([1223bd1](https://github.com/pustovitDmytro/semantic-release-telegram/commit/1223bd1e588e079235678e533147b398d53914a0)), closes [#78](https://github.com/pustovitDmytro/semantic-release-telegram/issues/78)
+
 ## [1.5.1](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.5.0...v1.5.1) (2022-01-22)
 
 
