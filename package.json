@@ -98,7 +98,7 @@
     "cottus": "1.10.6",
     "form-data": "4.0.0",
     "fs-extra": "10.0.0",
-    "git-url-parse": "11.6.0",
+    "git-url-parse": "13.0.0",
     "myrmidon": "1.7.2",
     "remark-parse": "9.0.0",
     "remark-telegraph": "1.0.4",
