@@ -1,3 +1,18 @@
+# [1.6.0](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.5.2...v1.6.0) (2022-09-05)
+
+
+### Chore
+
+* fixes npm audit vulnerabilities (#86) ([bed7507](https://github.com/pustovitDmytro/semantic-release-telegram/commit/bed75075152ad909a23ba98499fc7a9bf986ec03)), closes [#86](https://github.com/pustovitDmytro/semantic-release-telegram/issues/86)
+
+### Docs
+
+* help Ukraine 🇺🇦 ([107ee50](https://github.com/pustovitDmytro/semantic-release-telegram/commit/107ee50712195fcf892517fa3e6def4d6055082d))
+
+### Update
+
+* update git-url-parse [security]. #91 #92 #93 #94 #95 #96 #97 #98 ([b5a2d55](https://github.com/pustovitDmytro/semantic-release-telegram/commit/b5a2d55876eef1d42d0c6a37fbe1faf14d9ff4d9)), closes [#91](https://github.com/pustovitDmytro/semantic-release-telegram/issues/91) [#92](https://github.com/pustovitDmytro/semantic-release-telegram/issues/92) [#93](https://github.com/pustovitDmytro/semantic-release-telegram/issues/93) [#94](https://github.com/pustovitDmytro/semantic-release-telegram/issues/94) [#95](https://github.com/pustovitDmytro/semantic-release-telegram/issues/95) [#96](https://github.com/pustovitDmytro/semantic-release-telegram/issues/96) [#97](https://github.com/pustovitDmytro/semantic-release-telegram/issues/97) [#98](https://github.com/pustovitDmytro/semantic-release-telegram/issues/98)
+
 ## [1.5.2](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.5.1...v1.5.2) (2022-02-07)
 
 
