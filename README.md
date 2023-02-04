@@ -1,4 +1,6 @@
+![Logo](.docs/logo_250.png "semantic-release-telegram")
 # semantic-release-telegram
+
 [semantic-release][sr-url] plugin. Provides notifications to [Telegram][tg-url] chats.
 
 [![Version][badge-vers]][npm]
@@ -20,18 +22,16 @@
 [![License][badge-lic]][github]
 [![Made in Ukraine][ukr-badge]][ukr-link]
 
-
-# 🇺🇦 Help Ukraine
+## 🇺🇦 Help Ukraine
 I woke up on my 26th birthday at 5 am from the blows of russian missiles. They attacked the city of Kyiv, where I live, as well as the cities in which my family and friends live. Now my country is a war zone. 
 
-We fight for democratic values, for freedom, for our future! 
-I am stopping any support of my packages by the time until all russians leave my country on trucks or in boxes. 
+We fight for democratic values, freedom, for our future! Once again Ukrainians have to stand against evil, terror, against genocide. The outcome of this war will determine what path human history is taking from now on.
 
-💛💙  Help Ukraine! We need your support! There are dozen ways to help us, just do it!
+💛💙  Help Ukraine! We need your support! There are [dozen ways][ukr-link] to help us, just do it!
 
 ## Table of Contents
 - [semantic-release-telegram](#semantic-release-telegram)
-- [🇺🇦 Help Ukraine](#-help-ukraine)
+  - [🇺🇦 Help Ukraine](#-help-ukraine)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Installation](#installation)
