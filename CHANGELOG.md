@@ -1,3 +1,14 @@
+## [1.6.2](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.6.1...v1.6.2) (2023-02-07)
+
+
+### Chore
+
+* fixes logo outline ([7121378](https://github.com/pustovitDmytro/semantic-release-telegram/commit/7121378ddde3dee0eef988d545785fc3eb7c6f35))
+
+### Docs
+
+* fix docs typo ([9e10a44](https://github.com/pustovitDmytro/semantic-release-telegram/commit/9e10a4465dfb35fa77f0d87971b7898417516160))
+
 ## [1.6.1](https://github.com/pustovitDmytro/semantic-release-telegram/compare/v1.6.0...v1.6.1) (2023-02-04)
 
 
