@@ -103,7 +103,7 @@ Config attribute description:
 
 | Option | Required | Type | Description | Default |
 |----|---|---|------------------------------------|------------------------------------|
-| `name`          | no | ```string```  | Heroku application name.    | name from package.json |
+| `name`          | no | ```string```  | Application name.    | name from package.json |
 | `chats`    | yes | ```array``` | List of chats for sending. The bot should have access to each chat. |      |
 | `templates.success`    | no |  ```string```  | HTML template, send in case of success. | [SUCCESS.html](templates/SUCCESS.html) |
 | `templates.fail`    | no |  ```string```  | HTML template, send in case of fail. | [FAIL.html](templates/FAIL.html) |
