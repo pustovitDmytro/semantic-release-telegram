@@ -100,7 +100,7 @@
     "fs-extra": "10.0.0",
     "git-url-parse": "13.0.0",
     "myrmidon": "1.7.2",
-    "remark-parse": "9.0.0",
+    "remark-parse": "11.0.0",
     "remark-telegraph": "1.0.4",
     "unified": "9.2.2"
   }
