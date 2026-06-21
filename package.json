@@ -96,7 +96,7 @@
     "archiver": "5.3.0",
     "base-api-client": "1.5.8",
     "cottus": "1.10.6",
-    "form-data": "4.0.0",
+    "form-data": "4.0.6",
     "fs-extra": "10.0.0",
     "git-url-parse": "13.0.0",
     "myrmidon": "1.7.2",
